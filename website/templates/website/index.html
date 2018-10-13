@@ -1,0 +1,98 @@
+{% load static %}
+
+<style>
+    body, html {
+                height: 100%;
+                margin: 0%;
+                font: "Rochester";
+                }
+
+.bg { 
+    /* The image used */
+    background-image: url("{% static 'cenita3.jpg' %}");
+    background-attachment: fixed;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-holder {
+    position: relative;
+    top: -200px;
+    /* left: 0px; */
+    background: white;
+    font-family: "Rochester";
+    min-height: 1000px;
+}
+
+.content {
+    margin: 0% 10% 0% 10%;
+}
+
+.menu {
+    position: relative;
+    background: white;
+    font-family: "Rochester";
+    font-size: 30;
+    top: -20px;
+    /* float: center; */
+    display: inline-block;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    /* align-items: center; */
+    /* min-width: 100px; */
+    /* width: 500px; */
+    /* margin: auto; */
+    /* text-align: center; */
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+li{
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
+</style>
+
+<html>
+    <head>
+        <!-- <meta name='viewport' content='width=device-width', initial-scale=1> -->
+    </head>
+    <body>
+        <div class='bg'></div>
+        <div class='content-holder'>
+            <div class='center'>
+                <div class='menu'>
+                    <!-- <a href="{% url 'party' %}">Bridal Party</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Directions&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Things To Do&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;RSVP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Registry -->
+                    <ul>
+                        <li><a href="{% url 'party' %}">Bridal Party</a></li>
+                        <li><a href="{% url 'directions' %}">Directions</a></li>
+                        <li><a href="{% url 'activities' %}">Things To Do</a></li>
+                        <li><a href="{% url 'rsvp' %}">RSVP</a></li>
+                        <li><a href="{% url 'registry' %}">Regristry</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='content'>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
