@@ -1,0 +1,126 @@
+@import '../motion-ui/src/motion-ui.scss';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body, html {
+            height: 100%;
+            margin: 0%;
+            font: "Rochester";
+            }
+
+ul {
+    // @include mui-fade(in, $duration:0.6s, $delay:1.5s)
+    @include mui-hinge(in, $from:top, $delay:1.5s)
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("../cenita3.jpg");
+    background-attachment: fixed;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-holder {
+    position: relative;
+    top: -200px;
+    /* left: 0px; */
+    background: white;
+    font-family: "Rochester";
+    min-height: 1000px;
+    @include mui-fade(in, $duration:0.6s, $delay:1s);
+    // @include mui-fade(in);
+    // @include mui_series(2s) {
+    //     .my-queue-fade {@include mui-queue(0s, 2s, fade);}
+    // }
+}
+
+.instant-fade {
+    @include mui-fade(in, $duration:0.6s, $delay:0.5s)
+}
+
+.delayed-fade {
+    @include mui-fade(in, $duration:1s, $delay:2s)
+}
+// .fade-in{
+//     @include mui-fade(in, $duration:10s);
+// }
+
+.content {
+    margin: 0% 10% 0% 10%;
+    // @include mui-fade(in, $duration:1s, $delay:2s)
+    // @include mui-hinge(in, $from:top, $delay:1.7s)
+    
+}
+
+// p{  
+//     border: solid;
+//     border-width: 150px;
+//     border-color: orange;
+//     // border-image: 
+//     //     url('../img/small_box.gif') 
+//     //     50 50 50 50  / 
+//     //     repeat;
+    
+//     font-size: 50px; 
+// }
+
+.box {
+    border: 20px solid;
+    padding: 20px;
+    // float: left;
+    border-image: url('../img/small_box.png') 100 repeat;
+    font-family: "Trajan Pro";   
+}
+
+.helper {
+    border-color: red;
+    border-width: 20px;
+    border-style: solid;
+    background: red;
+}
+
+.box p{
+    max-width: 400px
+}
+
+.menu {
+    position: relative;
+    background: white;
+    font-family: "Rochester";
+    font-size: 30;
+    top: -20px;
+    /* float: center; */
+    display: inline-block;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    /* align-items: center; */
+    /* min-width: 100px; */
+    /* width: 500px; */
+    /* margin: auto; */
+    /* text-align: center; */
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+li{
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
