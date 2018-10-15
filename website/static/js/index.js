@@ -9,10 +9,10 @@ $(document).ready(function() {
         MotionUI.animateIn('.content-holder', 'fade-in');
         MotionUI.animateIn('ul', 'hinge-in');
         $('.content').addClass('delayed-fade')
-        $.get('/party', function(data) {
-            $('.content').html(data)
-            MotionUI.animateIn('.content', 'fade-in');
-        })
+        // $.get('/party', function(data) {
+        //     $('.content').html(data)
+        // })
+        MotionUI.animateIn('.content', 'fade-in');
     } else {
         $('.content').addClass('instant-fade')
     };
@@ -23,7 +23,8 @@ $(document).ready(function() {
     $('a').click(function (){
         console.log($(this).prop("name"))
         var $page = $(this).prop("name")
-        $.get($page, function(data) {
+        window.history.pushState("", "Alex and Melissa", $page)
+        $.get($page + '?slim=True', function(data) {
             $('.content').removeClass('delayed-fade')
             $('.content').addClass('instant-fade')
             $('.content').hide()

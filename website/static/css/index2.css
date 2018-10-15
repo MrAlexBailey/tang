@@ -582,7 +582,6 @@ ul.mui-enter.mui-enter-active {
 .content-holder {
   position: relative;
   top: -200px;
-  /* left: 0px; */
   background: white;
   font-family: "Rochester";
   min-height: 1000px;
@@ -590,7 +589,7 @@ ul.mui-enter.mui-enter-active {
 .content-holder.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
-  transition-duration: 0.6s;
+  transition-duration: 0.7s;
   transition-delay: 1s;
   opacity: 0;
   transition-property: opacity;
@@ -603,7 +602,7 @@ ul.mui-enter.mui-enter-active {
 .instant-fade.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
-  transition-duration: 0.6s;
+  transition-duration: 0.7s;
   transition-delay: 0.5s;
   opacity: 0;
   transition-property: opacity;
@@ -616,7 +615,7 @@ ul.mui-enter.mui-enter-active {
 .delayed-fade.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
-  transition-duration: 1s;
+  transition-duration: 0.7s;
   transition-delay: 2s;
   opacity: 0;
   transition-property: opacity;
@@ -627,14 +626,33 @@ ul.mui-enter.mui-enter-active {
 }
 
 .content {
-  margin: 0% 10% 0% 10%;
+  width: 960px;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px;
+  clear: both;
 }
 
 .box {
   border: 20px solid;
-  padding: 20px;
   border-image: url("../img/small_box.png") 100 repeat;
   font-family: "Trajan Pro";
+  align-items: center;
+}
+
+.two-cols {
+  height: auto;
+  float: left;
+  margin: 0 1.2345679012%;
+  /* 10px / 810 */
+  padding: 0;
+}
+
+.two-cols {
+  width: 460px;
+  height: auto;
+  float: left;
+  margin: 0 10px;
 }
 
 .helper {

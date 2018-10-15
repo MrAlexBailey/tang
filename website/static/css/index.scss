@@ -2,6 +2,12 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+$intialDelay: 1.0s;
+$hingeDelay: 1.5s;
+$instantFadeDelay: 0.5s;
+$delayedFadeDelay: 2.0s;
+$fadeDuration: 0.7s;
+
 body, html {
             height: 100%;
             margin: 0%;
@@ -10,7 +16,7 @@ body, html {
 
 ul {
     // @include mui-fade(in, $duration:0.6s, $delay:1.5s)
-    @include mui-hinge(in, $from:top, $delay:1.5s)
+    @include mui-hinge(in, $from:top, $delay:$hingeDelay)
 }
 
 .bg { 
@@ -30,53 +36,55 @@ ul {
 .content-holder {
     position: relative;
     top: -200px;
-    /* left: 0px; */
     background: white;
     font-family: "Rochester";
     min-height: 1000px;
-    @include mui-fade(in, $duration:0.6s, $delay:1s);
-    // @include mui-fade(in);
-    // @include mui_series(2s) {
-    //     .my-queue-fade {@include mui-queue(0s, 2s, fade);}
-    // }
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$intialDelay);
 }
 
 .instant-fade {
-    @include mui-fade(in, $duration:0.6s, $delay:0.5s)
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$instantFadeDelay)
 }
 
 .delayed-fade {
-    @include mui-fade(in, $duration:1s, $delay:2s)
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$delayedFadeDelay)
 }
 // .fade-in{
 //     @include mui-fade(in, $duration:10s);
 // }
 
 .content {
-    margin: 0% 10% 0% 10%;
+    // margin: 0% 10% 0% 10%;
     // @include mui-fade(in, $duration:1s, $delay:2s)
     // @include mui-hinge(in, $from:top, $delay:1.7s)
+    width:960px;
+    height:auto;
+    margin:0px auto;
+    padding:0px;
+    clear:both;
     
 }
 
-// p{  
-//     border: solid;
-//     border-width: 150px;
-//     border-color: orange;
-//     // border-image: 
-//     //     url('../img/small_box.gif') 
-//     //     50 50 50 50  / 
-//     //     repeat;
-    
-//     font-size: 50px; 
-// }
-
 .box {
     border: 20px solid;
-    padding: 20px;
+    // padding: 20px;
     // float: left;
     border-image: url('../img/small_box.png') 100 repeat;
-    font-family: "Trajan Pro";   
+    font-family: "Trajan Pro";
+    align-items: center;
+}
+
+.two-cols{
+    height:auto;
+    float: left;
+    margin:0 1.234567901235%; /* 10px / 810 */
+    padding: 0;
+}
+.two-cols {
+    width: 460px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
 }
 
 .helper {
