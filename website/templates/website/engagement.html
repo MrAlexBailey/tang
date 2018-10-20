@@ -1,0 +1,15 @@
+{% extends slim|yesno:"website/blank.html,website/index.html" %}
+{% load static %}
+{% block content %}
+<div class='spacer'></div>
+<div class='two-cols'>
+    <img width="100%" src='{% static "img/DSC_6284.JPG" %}'>
+</div>
+<div class='two-cols'>
+    <p>bla bla bla they met on Tinder and got engaged at the Fox.  Look at how cute they are. LOOK AT IT. <br>OMG THEY'RE SO CUTE I'M GONNA THROW UP</p>
+</div>
+<div class='spacer'></div>
+<div class='single-center-col'>
+    <img width='100%' src='{% static "img/DSC_6289.jpg" %}' style='margin:0 auto 0 200;'>
+</div>
+{% endblock %}

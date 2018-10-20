@@ -19,6 +19,11 @@ ul {
     @include mui-hinge(in, $from:top, $delay:$hingeDelay)
 }
 
+p {
+    font-family: "Myriad";
+    font-size: 28;
+}
+
 .bg { 
     /* The image used */
     background-image: url("../cenita3.jpg");
@@ -49,9 +54,6 @@ ul {
 .delayed-fade {
     @include mui-fade(in, $duration:$fadeDuration, $delay:$delayedFadeDelay)
 }
-// .fade-in{
-//     @include mui-fade(in, $duration:10s);
-// }
 
 .content {
     // margin: 0% 10% 0% 10%;
@@ -80,11 +82,22 @@ ul {
     margin:0 1.234567901235%; /* 10px / 810 */
     padding: 0;
 }
+
 .two-cols {
     width: 460px;
-    height: auto;
-    float: left;
     margin: 0 10px;
+}
+
+.single-center-col {
+    text-align:center;
+    width: 800px;
+    float: left;
+}
+
+.spacer {
+    height: 42px;
+    width: 100%;
+    clear: both;
 }
 
 .helper {

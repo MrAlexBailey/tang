@@ -27,3 +27,7 @@ def rsvp(request):
 def registry(request):
     slim = slim_trim(request)     
     return render(request, 'website/registry.html', {'slim': slim})
+
+def engagement(request):
+    slim = slim_trim(request)     
+    return render(request, 'website/engagement.html', {'slim': slim})
