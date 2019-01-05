@@ -6,7 +6,7 @@ def slim_trim(request):
     return request.GET.get('slim', None) == 'True'
 
 def index(request):
-    return render(request, 'website/home.html')
+    return render(request, 'website/engagement.html')
 
 def party(request):
     slim = slim_trim(request)     
@@ -31,3 +31,7 @@ def registry(request):
 def engagement(request):
     slim = slim_trim(request)     
     return render(request, 'website/engagement.html', {'slim': slim})
+
+def party(request):
+    slim = slim_trim(request)     
+    return render(request, 'website/party.html', {'slim': slim})

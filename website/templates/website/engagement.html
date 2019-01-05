@@ -2,14 +2,30 @@
 {% load static %}
 {% block content %}
 <div class='spacer'></div>
-<div class='two-cols'>
-    <img width="100%" src='{% static "img/DSC_6284.JPG" %}'>
-</div>
-<div class='two-cols'>
-    <p>bla bla bla they met on Tinder and got engaged at the Fox.  Look at how cute they are. LOOK AT IT. <br>OMG THEY'RE SO CUTE I'M GONNA THROW UP</p>
-</div>
-<div class='spacer'></div>
-<div class='single-center-col'>
-    <img width='100%' src='{% static "img/DSC_6289.jpg" %}' style='margin:0 auto 0 200;'>
+<div class='content' data-animation="instant-fade" data-animationslow="delayed-fade" hidden>
+    <div class='row'>
+        <div class='child'>
+            <div class='pic-frame'>
+                <div class='pic-content'>
+                    <img src='{% static "img/alex.jpg"%}' width=350>
+                </div>
+                <div class='pic-content'>
+                    <h2>Alexander Patrick Bailey<br></h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus illum unde exercitationem quas autem. Repellendus provident accusantium quis earum minima, voluptates alias eos quisquam harum maiores eaque voluptatum doloribus non.
+                </div>
+            </div>
+        </div>
+        <div class='child'>
+            <div class='pic-frame'>
+                <div class='pic-content'>
+                    <img src='{% static "img/melissa.jpg"%}' width=350>
+                </div>
+                <div class='pic-content'>
+                    <h2>Melissa Marie Manson<br></h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellendus aliquid ullam recusandae error id cumque aperiam, ratione totam nemo quo dolore minus perspiciatis odit. Non, perferendis unde? Veritatis, ipsa.
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

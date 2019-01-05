@@ -9,9 +9,9 @@ $(document).ready(function() {
         MotionUI.animateIn('.content-holder', 'fade-in');
         MotionUI.animateIn('ul', 'hinge-in');
         $('.content').addClass('delayed-fade')
-        // $.get('/party', function(data) {
-        //     $('.content').html(data)
-        // })
+        $.get('/party', function(data) {
+            $('.content').html(data)
+        })
         MotionUI.animateIn('.content', 'fade-in');
     } else {
         $('.content').addClass('instant-fade')
@@ -28,7 +28,7 @@ $(document).ready(function() {
             $('.content').removeClass('delayed-fade')
             $('.content').addClass('instant-fade')
             $('.content').hide()
-            $('.content').html(data)
+            $('.loader').html(data)
             MotionUI.animateIn('.content', 'fade-in')
             console.log(data)
         });

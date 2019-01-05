@@ -14,19 +14,27 @@ body, html {
             font: "Rochester";
             }
 
-ul {
-    // @include mui-fade(in, $duration:0.6s, $delay:1.5s)
-    @include mui-hinge(in, $from:top, $delay:$hingeDelay)
-}
-
 p {
     font-family: "Myriad";
     font-size: 28;
 }
 
+ul {
+    @include mui-hinge(in, $from:top, $delay:$hingeDelay);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+li{
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
+
 .bg { 
     /* The image used */
-    background-image: url("../cenita3.jpg");
+    background-image: url("../img/eng/emily/DSC05374.jpg");
     background-attachment: fixed;
 
     /* Full height */
@@ -44,27 +52,39 @@ p {
     background: white;
     font-family: "Rochester";
     min-height: 1000px;
-    @include mui-fade(in, $duration:$fadeDuration, $delay:$intialDelay);
-}
 
-.instant-fade {
-    @include mui-fade(in, $duration:$fadeDuration, $delay:$instantFadeDelay)
-}
-
-.delayed-fade {
-    @include mui-fade(in, $duration:$fadeDuration, $delay:$delayedFadeDelay)
 }
 
 .content {
-    // margin: 0% 10% 0% 10%;
-    // @include mui-fade(in, $duration:1s, $delay:2s)
-    // @include mui-hinge(in, $from:top, $delay:1.7s)
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     width:960px;
-    height:auto;
     margin:0px auto;
-    padding:0px;
-    clear:both;
-    
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 960px;
+    align-content: center;
+}
+
+.child {
+    width: 500px;
+    height: 400px;
+    margin: auto;
+}
+
+.pic-frame {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+.pic-content {
+    align-self: center;
 }
 
 .box {
@@ -96,6 +116,12 @@ p {
 
 .spacer {
     height: 42px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-small {
+    height: 14px;
     width: 100%;
     clear: both;
 }
@@ -134,14 +160,10 @@ p {
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; 
+.instant-fade {
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$instantFadeDelay)
 }
 
-li{
-    float: left;
-    padding: 0px 20px 0px 20px;
+.delayed-fade {
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$delayedFadeDelay)
 }

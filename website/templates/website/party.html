@@ -1,5 +1,133 @@
-{% extends slim|yesno:"website/blank.html,website/index.html" %}
-
+{% extends slim|yesno:"website/blank.html,website/party.html" %}
+{% load static %}
 {% block content %}
-party page
+<div class='spacer'></div>
+<div class='content' data-animation="instant-fade" data-animationslow="delayed-fade" hidden>
+    <div class='row'>
+        <h1>Bridesmaids</h1>
+    </div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/bailey.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Bailey Manson</h2>
+                <h3>Maid of Honor</h3>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam incidunt doloremque autem, aliquam minus veniam ad voluptate consequuntur delectus debitis quidem, unde tenetur. Sequi similique numquam, ab quod iusto illo.</h4>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/ari.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Arianna Grande</h2>
+                <h3>Matron of Honor</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/brittany.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Brittany Bailey</h2>
+                <h3>Bridesmaid</h3>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/mary.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Mary Parton</h2>
+                <h3>Bridesmaid</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/kara.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Kara Foster</h2>
+                <h3>Bridesmaid</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/kalie.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Kalie Martin</h2>
+                <h3>Bridesmaid</h3>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <h1>Groomsmen</h1>
+    </div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/matt.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Matt Canei</h2>
+                <h3>Best Man</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/moss.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Adam Moss</h2>
+                <h3>Groomsman</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/krezel.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Eric Krezel</h2>
+                <h3>Groomsman</h3>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <h1>The Hired Help</h1>
+    </div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/maggiebelle.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Maggie Belle Lamb</h2>
+                <h3>Flower Girl</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/avaline.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Avaline Lamb</h2>
+                <h3>Flower Girl</h3>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/logan.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Logan Robert Favero</h2>
+                <h3>Ring Bearer</h3>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

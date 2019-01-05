@@ -22,15 +22,16 @@
                         <li><a href="{% url 'activities' %}">Things To Do</a></li>
                         <li><a href="{% url 'rsvp' %}">RSVP</a></li>
                         <li><a href="{% url 'registry' %}">Regristry</a></li> -->
-                        <li><a href="#" name="/engagement">Engagement</a></li>
-                        <li><a href="#" name="/directions">Directions</a></li>
-                        <li><a href="#" name="/activities">Things To Do</a></li>
-                        <li><a href="#" name="/rsvp">RSVP</a></li>
+                        <li><a href="#" name="/engagement">About Us</a></li>
+                        <li><a href="#" name="/party">Wedding Party</a></li>
+                        <li><a href="#" name="/directions">The Event</a></li>
+                        <li><a href="#" name="/activities">Around Helen</a></li>
+                        <!-- <li><a href="#" name="/rsvp">RSVP</a></li> -->
                         <li><a href="#" name="/registry">Regristry</a></li>
                     </ul>
                 </div>
             </div>
-            <div class='content' data-animation="instant-fade" data-animationslow="delayed-fade" hidden>
+            <div class='loader'>
                 {% block content %}
                 {% endblock %}
             </div>
