@@ -2,30 +2,72 @@
 {% load static %}
 {% block content %}
 <div class='spacer'></div>
-<div class='content' data-animation="instant-fade" data-animationslow="delayed-fade" hidden>
+<div class='content'>
     <div class='row'>
-        <div class='child'>
-            <div class='pic-frame'>
-                <div class='pic-content'>
-                    <img src='{% static "img/alex.jpg"%}' width=350>
-                </div>
-                <div class='pic-content'>
-                    <h2>Alexander Patrick Bailey<br></h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus illum unde exercitationem quas autem. Repellendus provident accusantium quis earum minima, voluptates alias eos quisquam harum maiores eaque voluptatum doloribus non.
-                </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/alex.jpg"%}' width=350>
             </div>
+            <div class='pic-content'>
+                <h2>Alexander Patrick Bailey<br></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus illum unde exercitationem quas autem. Repellendus provident accusantium quis earum minima, voluptates alias eos quisquam harum maiores eaque voluptatum doloribus non.</p>
+            </div>
+
         </div>
-        <div class='child'>
-            <div class='pic-frame'>
-                <div class='pic-content'>
-                    <img src='{% static "img/melissa.jpg"%}' width=350>
-                </div>
-                <div class='pic-content'>
-                    <h2>Melissa Marie Manson<br></h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellendus aliquid ullam recusandae error id cumque aperiam, ratione totam nemo quo dolore minus perspiciatis odit. Non, perferendis unde? Veritatis, ipsa.
-                </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src='{% static "img/melissa.jpg"%}' width=350>
+            </div>
+            <div class='pic-content'>
+                <h2>Melissa Marie Manson<br></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellendus aliquid ullam recusandae error id cumque aperiam, ratione totam nemo quo dolore minus perspiciatis odit. Non, perferendis unde? Veritatis, ipsa.</p>
             </div>
         </div>
     </div>
+    <div class='spacer-medium rule'></div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <h1>From the Very First Date</h1>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src="{% static 'img/eng/skiball.jpg' %}" width=350>
+            </div>
+        </div>
+        <div class='pic-frame'>
+            <div class='pic-content'>
+                <img src="{% static 'img/eng/jct.jpg' %}" width=350>
+            </div>
+        </div>
+    </div>
+    <div class='spacer-medium'></div>
+    <div class='row'>
+        <div class='pic-content'>
+            <p>First date we went to JCT Kitchen and Ormsby's</p>
+        </div>
+    </div>
+    <div class='spacer-medium rule'></div>
+    <div class='row'>
+        <div class='pic-content'>
+            <h1>...and The Engagement</h1>
+        </div>
+    </div>
+    <div class='spacer-medium'></div>
+    <div class='row'>
+        <div class='pic-content'>
+            <img src="{% static 'img/eng/hannah/m-and-a-engagements-53.jpg' %}" width=100%>
+        </div>
+    </div>
+    <div class='spacer-medium'></div>
+    <div class='row'>
+        <div class='pic-content'>
+            <p>Alex proposed to Melissa at the Fox Theater after seeing Hamilton. Yay!  Oh and she said yes, of course.</p>
+        </div>
+    </div>
+    <div class='spacer'></div>
 </div>
 {% endblock %}

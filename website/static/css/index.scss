@@ -9,14 +9,18 @@ $delayedFadeDelay: 2.0s;
 $fadeDuration: 0.7s;
 
 body, html {
-            height: 100%;
-            margin: 0%;
-            font: "Rochester";
-            }
+    height: 100%;
+    margin: 0%;
+    font-family: "Narkisim Regular";
+}
 
 p {
-    font-family: "Myriad";
-    font-size: 28;
+    font-family: "Narkisim Regular";
+    font-size: 14;
+}
+
+h1, h2, h3 {
+    font-family: "Rochester";
 }
 
 ul {
@@ -24,12 +28,39 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden; 
+    // overflow: hidden; 
 }
 
 li{
     float: left;
     padding: 0px 20px 0px 20px;
+}
+
+.menu {
+    position: relative;
+    background: white;
+    font-size: 22;
+    top: -20px;
+    display: inline-block;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+}
+
+
+.menu a {
+    font-family: "Narkisim Regular";
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    border-bottom: 4px solid #00b1d5;
+}
+
+.menu a:active {
+    border-bottom: 4px solid #00b1d5;
 }
 
 .bg { 
@@ -52,21 +83,20 @@ li{
     background: white;
     font-family: "Rochester";
     min-height: 1000px;
-
+    @include mui-fade(in, $duration:$fadeDuration, $delay:$intialDelay);
 }
 
 .content {
     display:flex;
     justify-content: space-evenly;
     flex-direction: column;
-    width:960px;
-    margin:0px auto;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly;
     width: 960px;
+    margin: auto;
     align-content: center;
 }
 
@@ -81,6 +111,7 @@ li{
     flex-direction: column;
     align-content: center;
     text-align: center;
+    margin:0 10;
 }
 
 .pic-content {
@@ -96,26 +127,15 @@ li{
     align-items: center;
 }
 
-.two-cols{
-    height:auto;
-    float: left;
-    margin:0 1.234567901235%; /* 10px / 810 */
-    padding: 0;
-}
-
-.two-cols {
-    width: 460px;
-    margin: 0 10px;
-}
-
-.single-center-col {
-    text-align:center;
-    width: 800px;
-    float: left;
-}
-
 .spacer {
     height: 42px;
+    width: 100%;
+    clear: both;
+}
+
+
+.spacer-medium {
+    height: 28px;
     width: 100%;
     clear: both;
 }
@@ -124,6 +144,12 @@ li{
     height: 14px;
     width: 100%;
     clear: both;
+}
+
+.rule {
+    align-self: center;
+    border-bottom: 1px solid grey;
+    width: 75%;
 }
 
 .helper {
@@ -137,24 +163,6 @@ li{
     max-width: 400px
 }
 
-.menu {
-    position: relative;
-    background: white;
-    font-family: "Rochester";
-    font-size: 30;
-    top: -20px;
-    /* float: center; */
-    display: inline-block;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 2px;
-    /* align-items: center; */
-    /* min-width: 100px; */
-    /* width: 500px; */
-    /* margin: auto; */
-    /* text-align: center; */
-}
 
 .center {
     text-align: center;

@@ -3,7 +3,7 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'motion-ui/dist/motion-ui.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.scss' %}">
         <script src="{% static 'motion-ui/dist/motion-ui.js' %}"></script>
         <!-- <meta name='viewport' content='width=device-width', initial-scale=1> -->
         <!-- <script>
@@ -12,33 +12,25 @@
     </head>
     <body>
         <div class='bg'></div>
-        <div class='content-holder'>
+        <div class='content-holder' hidden>
             <div class='center'>
                 <div class='menu'>
-                    <!-- <a href="{% url 'party' %}">Bridal Party</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Directions&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Things To Do&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;RSVP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Registry -->
                     <ul>
-                        <!-- <li><a href="{% url 'party' %}">Bridal Party</a></li>
-                        <li><a href="{% url 'directions' %}">Directions</a></li>
-                        <li><a href="{% url 'activities' %}">Things To Do</a></li>
-                        <li><a href="{% url 'rsvp' %}">RSVP</a></li>
-                        <li><a href="{% url 'registry' %}">Regristry</a></li> -->
-                        <li><a href="#" name="/engagement">About Us</a></li>
-                        <li><a href="#" name="/party">Wedding Party</a></li>
-                        <li><a href="#" name="/directions">The Event</a></li>
-                        <li><a href="#" name="/activities">Around Helen</a></li>
-                        <!-- <li><a href="#" name="/rsvp">RSVP</a></li> -->
-                        <li><a href="#" name="/registry">Regristry</a></li>
+                        <li><a href="#" name="/engagement">ABOUT US</a></li>
+                        <li><a href="#" name="/party">WEDDING PARTY</a></li>
+                        <li><a href="#" name="/directions">THE EVENT</a></li>
+                        <li><a href="#" name="/activities">AROUND HELEN</a></li>
+                        <li><a href="#" name="/registry">REGISTRY</a></li>
                     </ul>
                 </div>
             </div>
-            <div class='loader'>
+            <div class='loader' data-animation="instant-fade" data-animationslow="delayed-fade">
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
     </body>
     <footer>
-        <script src="{% static 'js/index.js' %}"></script>
-               
+        <script src="{% static 'js/index.js' %}"></script>          
     </footer>
 </html>

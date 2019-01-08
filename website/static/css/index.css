@@ -549,19 +549,22 @@
 body, html {
   height: 100%;
   margin: 0%;
-  font: "Rochester";
+  font-family: "Narkisim Regular";
 }
 
 p {
-  font-family: "Myriad";
-  font-size: 28;
+  font-family: "Narkisim Regular";
+  font-size: 14;
+}
+
+h1, h2, h3 {
+  font-family: "Rochester";
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 ul.mui-enter {
   transition-duration: 500ms;
@@ -583,6 +586,32 @@ li {
   padding: 0px 20px 0px 20px;
 }
 
+.menu {
+  position: relative;
+  background: white;
+  font-size: 22;
+  top: -20px;
+  display: inline-block;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+
+.menu a {
+  font-family: "Narkisim Regular";
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  border-bottom: 4px solid #00b1d5;
+}
+
+.menu a:active {
+  border-bottom: 4px solid #00b1d5;
+}
+
 .bg {
   /* The image used */
   background-image: url("../img/eng/emily/DSC05374.jpg");
@@ -602,6 +631,18 @@ li {
   font-family: "Rochester";
   min-height: 1000px;
 }
+.content-holder.mui-enter {
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-duration: 0.7s;
+  transition-delay: 1s;
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.content-holder.mui-enter.mui-enter-active {
+  opacity: 1;
+}
 
 .content {
   display: flex;
@@ -615,6 +656,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   width: 960px;
+  align-content: center;
 }
 
 .child {
@@ -628,6 +670,7 @@ li {
   flex-direction: column;
   align-content: center;
   text-align: center;
+  margin: 0 10;
 }
 
 .pic-content {
@@ -666,6 +709,12 @@ li {
   clear: both;
 }
 
+.spacer-medium {
+  height: 28px;
+  width: 100%;
+  clear: both;
+}
+
 .spacer-small {
   height: 14px;
   width: 100%;
@@ -681,25 +730,6 @@ li {
 
 .box p {
   max-width: 400px;
-}
-
-.menu {
-  position: relative;
-  background: white;
-  font-family: "Rochester";
-  font-size: 30;
-  top: -20px;
-  /* float: center; */
-  display: inline-block;
-  justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 2px;
-  /* align-items: center; */
-  /* min-width: 100px; */
-  /* width: 500px; */
-  /* margin: auto; */
-  /* text-align: center; */
 }
 
 .center {
