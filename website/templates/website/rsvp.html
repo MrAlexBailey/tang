@@ -1,48 +1,44 @@
 {% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <style>
-.content-holder {
-    position: relative;
-    top: -200px;
-    background: white;
-    font-family: "Rochester";
-    min-height: 1000px;
-
-}
-
-.content {
-
-    width:960px;
-    height:auto;
-    margin:0px auto;
-    display:flex;
-}
-
-.child {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background: blue;
-}
 
 body, html {
     height: 100%;
-    margin: 0%;
-    font: "Rochester";
+    width: 100%;
+    margin: 0;
 }
 
+.background {
+    position:  absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-blend-mode: darken;
+    transition: 2s;
+}
+
+.background[bgimage="1"] {
+    background-image: url("../static/img/bg/1.webp");
+}
+
+.background[bgimage="2"] {
+    background-image: url("../static/img/bg/8.jpg");
+}
+
+.content {
+    position: relative;
+    top: 90%;
+    min-height: 1000px;
+    background: white;
 }
 
 </style>
-<body>
-<div class='content'>
-        <div class='spacer'></div>
-        <div class='child'>
-            <!-- <img src='{% static "img/alex.jpg"%}' width=350> -->
-            Alexander Patrick Bailey
-        </div>
-        <div class='child'>
-            <!-- <img src='{% static "img/melissa.jpg"%}' width=350> -->
-            Melissa Marie Manson
-        </div>
-</div>
-</body>
+<html>
+    <body>
+        <div class='background' bgimage="1"></div>
+        <!-- <div class='bg-image two'></div> -->
+        <div class='content'></div>
+    </body>
+</html>

@@ -5,6 +5,10 @@ __pycache__/
 
 # Django Static
 static/
+*/static/ 
+
+# Secrets
+secrets.py
 
 # C extensions
 *.so

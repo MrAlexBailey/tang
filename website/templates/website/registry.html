@@ -3,69 +3,36 @@
 {% block content %}
 <div class='spacer'></div>
 <div class='content'>
-    <div class='row' style="text-align: center">
-        <h2>In lieu of typical housewares and other goods, we are gracefully accepting contributions to our honeymoon excursions.  These once-in-a-lifetime opportunities will be everlasting memories in our hearts.</h2>
-    </div>
-    <div class='row'>
-        <div class='pic-frame'>
-            <div class='pic-content'>
-                <h2>Yukon Trail Train Ride</h2>
+    <div class='container'>
+        <div class='row' style="text-align: center">
+            <h2>In lieu of typical housewares and other goods, we are gratefully accepting contributions to our honeymoon excursions.  These once-in-a-lifetime opportunities will be everlasting memories in our hearts.</h2>
+        </div>
+        <div class='row'>
+            {% for item in items %}
+            <div class='col-6 col-lg-4' align='center'>
+                <div class='reg-title'><h2>{{item.title}}</h2></div>
+                {% with 'img/registry/'|add:item.image_name as image_static %}
+                    <img class='reg-image' src={% static image_static %} width=350>
+                {% endwith %}
+                <p class='reg-desc'>{{item.description}}</p>
+                <div class='goal-bar'>
+                    <span>{% if item.amr > 0 %}${{item.amr|floatformat:"-2"}} Left{% else %}Funded!{% endif %}</span>
+                    <div class='goal-fill' style="width:{{item.percent_finished}};"></div>
             </div>
-            <div class='pic-content'>
-                <img src='{% static "img/registry/yukontrain.jpg"%}' width=350>
-            </div>
-            <div class='pic-content'>
-                <p>ALL ABOARD! Skagway’s most scenic ALASKAN experience begins with a 28-mile journey between Skagway, Alaska, and Fraser, British Columbia, aboard the Scenic Railway of the World. The White Pass Railway, which was completed in 1900, has a narrow gauge track that takes visitors into the White Pass. Experience the breathtaking panorama of mountains, glaciers, gorges, waterfalls, tunnels, and trestles while listening to historic narration from the comfort of vintage passenger coaches. Climbing up the mountainside, you'll see the extreme changes in vegetation as you pass through several temperate zones before reaching Fraser.</p>
-            </div>
-            <div class='pic-content'>
+                {% if item.amr > 0 %}
+                <div class='reg-button'>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        {% csrf_token %}
                         <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input type="hidden" name="hosted_button_id" value="Y2MKMQXPUSRQN" />
+                        <input type="hidden" name="hosted_button_id" value="{{item.button}}" />
                         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                         <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
+                    </form>
+                </div>
+                {% endif %}
             </div>
-        </div>
-        <div class='pic-frame'>
-            <div class='pic-content'>
-                <h2>Whales and Helicopter Glacier Landing</h2>
-            </div>
-            <div class='pic-content'>
-                <img src='{% static "img/registry/whale.jpg"%}' width=350>
-            </div>
-            <div class='pic-content'>
-                <p>Your adventure begins with a short drive through downtown Juneau all the way to Auk Bay where you will have the opportunity to see humpback and orca whales, Dall's porpoises, stellar sea lions, harbor seals, bald eagles, and more.</p>
-            </div>
-            <div class='pic-content'>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input type="hidden" name="hosted_button_id" value="Y2MKMQXPUSRQN" />
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
-            </div>
-        </div>
-        <div class='pic-frame'>
-            <div class='pic-content'>
-                <h2>Misty Fjords Executive Flightseeing</h2>
-            </div>
-            <div class='pic-content'>
-                <img src='{% static "img/registry/flight.jpg"%}' width=350>
-            </div>
-            <div class='pic-content'>
-                <p>Your trip to the Misty Fjords will take you away from crowds and will amaze you with its extreme beauty, as well as its close proximity to the urban life of Ketchikan.</p>
-            </div>
-            <div class='pic-content'>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick" />
-                        <input type="hidden" name="hosted_button_id" value="Y2MKMQXPUSRQN" />
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
-            </div>
-        </div>
+            {% endfor %}
+        </div>   
     </div>
 </div>
-
-    
 {% endblock %}

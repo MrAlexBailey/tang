@@ -2,29 +2,29 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="{% static 'motion-ui/dist/motion-ui.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index.scss' %}">
-        <script src="{% static 'motion-ui/dist/motion-ui.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:600i" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
         <!-- <meta name='viewport' content='width=device-width', initial-scale=1> -->
         <!-- <script>
             MotionUI.animateIn('.content-holder', 'fade-in');
         </script> -->
     </head>
-    <body>
-        <div class='bg'></div>
+    <body bgimage="1">
         <div class='content-holder' hidden>
             <div class='center'>
                 <div class='menu'>
                     <ul>
-                        <li><a href="#" name="/engagement">ABOUT US</a></li>
-                        <li><a href="#" name="/party">WEDDING PARTY</a></li>
-                        <li><a href="#" name="/directions">THE EVENT</a></li>
-                        <li><a href="#" name="/activities">AROUND HELEN</a></li>
-                        <li><a href="#" name="/registry">REGISTRY</a></li>
+                        <li><a href="#" class='menulink {% if active == "engagement"%}activelink{% endif %}' name="/">OUR STORY</a></li>
+                        <li><a href="#" class='menulink {% if active == "party"%}activelink{% endif %}' name="/party">WEDDING PARTY</a></li>
+                        <li><a href="#" class='menulink {% if active == "directions"%}activelink{% endif %}' name="/directions">THE EVENT</a></li>
+                        <li><a href="#" class='menulink {% if active == "activities"%}activelink{% endif %}' name="/activities">AROUND HELEN</a></li>
+                        <li><a href="#" class='menulink {% if active == "registry"%}activelink{% endif %}' name="/registry">REGISTRY</a></li>
                     </ul>
                 </div>
             </div>
-            <div class='loader' data-animation="instant-fade" data-animationslow="delayed-fade">
+            <div class='loader'>
                 {% block content %}
                 {% endblock %}
             </div>
