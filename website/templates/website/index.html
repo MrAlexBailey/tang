@@ -1,36 +1,70 @@
 {% load static %}
+<!doctype html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:600i" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width', initial-scale=1>
+        
+        <meta property="og:url" content="https://alexandmelissabailey.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Alex and Melissa Bailey" />
+        <meta property="og:description" content="Our happily ever after begins September 14, 2019" />
+        <meta property="og:image" content="https://alexandmelissabailey.com/static/img/og.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="555" />
+        <meta property="og:image:height" content="1060" />
+
+        <link rel="apple-touch-icon" href="https://alexandmelissabailey.com/static/img/og.png">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-        <!-- <meta name='viewport' content='width=device-width', initial-scale=1> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+        <title>Alex and Melissa Bailey</title>
+        <meta name="description" content="Alex and Melissa Bailey's Wedding Website">
         <!-- <script>
             MotionUI.animateIn('.content-holder', 'fade-in');
         </script> -->
     </head>
     <body bgimage="1">
+        <div class='bg' id='bg-main' bgimage='1'></div>
+        <div class='bg' bgimage='2' style='z-index:-100;' hidden></div>
+        <div class='bg' bgimage='3' style='z-index:-100;' hidden></div>
+        <div class='bg' bgimage='4' style='z-index:-100;' hidden></div>
+        <div class='bg' bgimage='5' style='z-index:-100;' hidden></div>
+        <div class='bg' bgimage='6' style='z-index:-100;' hidden></div>
+        <div class='bg' bgimage='7' style='z-index:-100;' hidden></div>
         <div class='content-holder' hidden>
-            <div class='center'>
-                <div class='menu'>
-                    <ul>
-                        <li><a href="#" class='menulink {% if active == "engagement"%}activelink{% endif %}' name="/">OUR STORY</a></li>
-                        <li><a href="#" class='menulink {% if active == "party"%}activelink{% endif %}' name="/party">WEDDING PARTY</a></li>
-                        <li><a href="#" class='menulink {% if active == "directions"%}activelink{% endif %}' name="/directions">THE EVENT</a></li>
-                        <li><a href="#" class='menulink {% if active == "activities"%}activelink{% endif %}' name="/activities">AROUND HELEN</a></li>
-                        <li><a href="#" class='menulink {% if active == "registry"%}activelink{% endif %}' name="/registry">REGISTRY</a></li>
-                    </ul>
+            <div class='container-fluid'>
+                <div class='row justify-content-center mb-5 menu'>
+                    <div class='col-4 col-lg-2 offset-lg-1 ml-0' align='center'><a href="#" class='menulink {% if active == "engagement"%}activelink{% endif %}' name="/story">Our Story</a></div>
+                    <div class='col-4 col-lg-2' align='center'><a href="#" class='menulink {% if active == "party"%}activelink{% endif %}' name="/party">Wedding Party</a></div>
+                    <div class='col-4 col-lg-2' align='center'><a href="#" class='menulink {% if active == "directions"%}activelink{% endif %}' name="/directions">The Event</a></div>
+                    <div class='col-4 col-lg-2' align='center'><a href="#" class='menulink {% if active == "activities"%}activelink{% endif %}' name="/activities">Around Helen</a></div>
+                    <div class='col-4 col-lg-2' align='center'><a href="#" class='menulink {% if active == "registry"%}activelink{% endif %}' name="/registry">Registry</a></div>
                 </div>
             </div>
-            <div class='loader'>
-                {% block content %}
-                {% endblock %}
+            <div class='container'>
+                <div class='content'>
+                    <div class='loader'>
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                    <div class='footer'>
+                        <p>Website designed by the Groom. <a href="https://mralexbailey.com">MrAlexBailey.com</a></p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </body>
     <footer>
-        <script src="{% static 'js/index.js' %}"></script>          
+        <script src="{% static 'js/index.js' %}"></script>
     </footer>
 </html>

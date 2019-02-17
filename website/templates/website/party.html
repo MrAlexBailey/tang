@@ -1,128 +1,97 @@
 {% extends slim|yesno:"website/blank.html,website/index.html" %}
 {% load static %}
 {% block content %}
-<div class='spacer'></div>
-<div class='content'>
-    <div class='container'>
-        <div class='row justify-content-center'>
-            <div class='col-10' align='center'>
-                <h1>Bridesmaids</h1>
-            </div>
-        </div>
-        <div class='row' align='center'>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/bailey.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Bailey Manson</h2><h3 class='mt-1'>Maid of Honor</h3>
-                <p>Hello Everyone! My name is Bailey Manson and I am sister to Melissa and Maid of Honor for the Bailey wedding. I currently live in Dahlonega, Georgia where I am a student at the University of North Georgia. I am finishing up a baccalaureate in Sports Medicine and beginning a master's in Athletic Training Summer 2019. Along with schooling, I work for Varsity All Star, specifically Universal Cheerleaders Association within the company, as a cheerleading instructor. My summers and weekends are typically spent traveling for camps, clinics, competitions, and parades.</p>
-                <p>Growing up with Melissa as a sister was nothing but adventurous! Being six years apart, Melissa was always someone to look up to and took on a teaching role. Being the book worm she was, our summers were spent with Melissa building extravagant blanket forts for day-long "reading parties". Even as a seven-year-old, I knew parties were supposed to be a lot better than that.  It was not until we were older and Melissa was in college, however; that she became one of my very best friends. Letters, pictures, and care packages were exchanged throughout her time away. Now, with only fifty-nine miles between us, I always look forward to our spontaneous wine nights, weekends filled with giggling and time with the fur babies, and above all, spending as much time as humanly possible, still, looking up to my older sister. </p>
-                <p>I am so excited to be apart of such a special wedding and witness the marriage of two, perfectly intertwined souls.</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/ari.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Ariane Koschorke</h2><h3 class='mt-1'>Matron of Honor</h3>
-                <p>Once Upon a Time, in the far away land of Athens, Georgia, in the Spring of 2011 Melissa entered into a house upon a hill with the letters Alpha Kappa Psi on the front.  Little did Melissa and Ari know, but this would be the beginning of a life-long adventure with one another and never a dull moment.  Ever since that fateful day, there have been hundreds, if not thousands, of quests consisting of crazy escapades due to their shared love of the unknown.  The real-life adventures have changed and become more challenging throughout the years, but they continue to slug through them side by side!</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/brittany.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Brittany Bailey</h2><h3 class='mt-1'>Bridesmaid</h3>
-                <p>Brittany is Alex’s younger sister, and she is very excited to have Melissa as her new sister-in-law!  Her favorite part about growing up with Alex (other than stealing his cool gadgets and insisting he let her play video games with him) was knowing he was always there to look out for her.  As she’s gotten to know Melissa over the past couple of years, she knows that Alex could not have picked a sweeter person to be his wife, and can’t wait to welcome her into the family.</p>
-                <p>She currently works for Kennesaw State University as a Senior Budget Analyst.  Her son, Logan, is proud to be Alex and Melissa’s ring bearer.</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/mary.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Mary Parton</h2><h3 class='mt-1'>Bridesmaid</h3>
-                <p>Melissa and I met when we were in high school at McIntosh. Melissa was a junior and I was a sophomore. We didn’t know it when we were first cast in Anne Frank, but that was the spark to our life long friendship. Even now when we are states apart, her living in Atlanta and me in northern Virginia we still make time to keep in touch. We might not call each other everyday and we don’t see each other every day, but when we do it’s like we never separated. Melissa is one of my best friends and probably the only person who has been there for me when ever I need her. I’m thankful to be able to have a best friend like her.</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/kara.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Kara Foster</h2><h3 class='mt-1'>Bridesmaid</h3>
-                <p>Kara is a freelance artist and maker based out of Atlanta who usually works in the film industry. She and Melissa met in early 2016 when Kara had just moved to the city and was looking for new friends. After bonding over their love for crafting and theatre, they became instant friends and have been watching RuPaul’s Drag Race together ever since!</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/kalie.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Kalie Martin</h2><h3 class='mt-1'>Bridesmaid</h3>
-                <p>Hi I'm Kalie and I'm so excited Melissa and Alex's big day! Melissa and I met in college at UGA. I was rushing AKPsi Business Fraternity (of which Melissa and Ari were already brothers) and Melissa was my unofficial "Big" in the Fraternity. We became the best of friends instantly and she was so welcoming and helpful when I rushed. We had tons of fun and adventures together during our college years (with too many gummy bear martinis and drunkenly hilarious stories to count!). My favorite memory with Melissa is when we ventured into Nashville's Coyote Ugly bar in the middle of the afternoon and of course ended up dancing on the bar! Melissa and I moved down to Atlanta after college, where I still currently live and work in the music industry. When Melissa met Alex I was overjoyed by how perfect they were for each other and knew it was only a matter of time before they'd be engaged. The proposal was spectacular (major props to Alex!) and I'm so happy Melissa gets to marry her prince charming!</p>
-            </div>
-        </div>
-        <div class='row justify-content-center'>
-            <div class='col-10' align='center'>
-                <h1>Groomsmen</h1>
-            </div>
-        </div>
-        <div class='row' align='center'>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/matt.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Matt Canei</h2><h3 class='mt-1'>Best Man</h3>
-                <p>Matt is a game developer based in Atlanta. He and Alex met in grade school when they were both 8 years old. They quickly became lifelong best friends and "brothers" after years of Mario Kart, lugging each others giant computers to and from each others houses in middle school to driving to the same place 5 times a week to eat in high school. Adulthood can make friendships a bit tough, but there can never be too much distance between childhood brothers.</p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/krezel.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Eric Krezel</h2><h3 class='mt-1'>Groomsman</h3>
-                <p>Eric Krezel here, 42 and living the life in Grant Park (the cool section of Atlanta). A native of Chicago, I came to Atlanta just around the time of the Olympics, 1996, and met my lovely wife to be, Meredith (a native New Yorker) here in December 2012…it’s been happiness ever since (except when it comes to the Cubs and the Yankees). 😉  We live with our two dogs, Dobby the 11 year old Bassett Hound and Linus, a 3 year old Dachshund/Boston Terrier Mix who are the coolest low riders you’ve ever seen. We love to travel (who doesn’t) and try to get away every few months, even if it means a weekend in a cabin up in the mountains. We haven’t decided exactly where we are going on our honeymoon yet, but Corsica, Italy, is looking good.</p>
-                <p>I’ve known Alex for 7 years through working at AT&T and him marrying Melissa makes me happy. He is one of the most genuine people in my life and when you like and respect someone, you want good things for them. Him marrying Melissa is a good thing. I hope they find the kind of happiness I have been fortunate to find and I am humbled by their decision to include me in their happy day. I wish them nothing but the best life has to offer them. </p>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/moss.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Adam Moss</h2><h3 class='mt-1'>Groomsman</h3>
-                <p>Brittany is Alex’s younger sister, and she is very excited to have Melissa as her new sister-in-law!  Her favorite part about growing up with Alex (other than stealing his cool gadgets and insisting he let her play video games with him) was knowing he was always there to look out for her.  As she’s gotten to know Melissa over the past couple of years, she knows that Alex could not have picked a sweeter person to be his wife, and can’t wait to welcome her into the family.</p>
-                <p>She currently works for Kennesaw State University as a Senior Budget Analyst.  Her son, Logan, is proud to be Alex and Melissa’s ring bearer.</p>
-            </div>
-        </div>
-        <div class='row justify-content-center'>
-            <div class='col-10' align='center'>
-                <h1>The Hired Help</h1>
-            </div>
-        </div>
-        <div class='row' align='center'>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/maggiebelle.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Maggie Belle Lamb</h2><h3 class='mt-1'>Flower Girl</h3>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/avaline.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Avaline Lamb</h2><h3 class='mt-1'>Flower Girl</h3>
-            </div>
-            <div class='col-6 col-lg-4 mb-4'>
-                <img src='{% static "img/logan.jpg"%}' class='img-fluid'>
-                <h2 class='mb-1'>Logan Robert Favero</h2><h3 class='mt-1'>Ring Bearer</h3>
-            </div>
+    <div class='row justify-content-center'>
+        <div class='col-10' align='center'>
+            <h1>Bridesmaids</h1>
         </div>
     </div>
-</div>
-
-<!-- 
-
+    <div class='row' align='center'>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/bailey.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Bailey Manson</h2><h3 class='mt-1'>Maid of Honor</h3>
+            <p>My name is Bailey Manson, and I am Melissa’s younger sister. I currently live in Dahlonega, Georgia where I am a student at the University of North Georgia. I am finishing up a baccalaureate in Sports Medicine and beginning a master's in Athletic Training Summer 2019. Along with schooling, I work for the Universal Cheerleaders Association as a cheerleading instructor. Growing up with Melissa as a sister was nothing but adventurous! I always look forward to our spontaneous wine nights, weekends filled with giggling and time with the fur babies, and above all, spending as much time as humanly possible looking up to my older sister. I am so excited to be a part of such a special wedding and witness the marriage of two perfectly intertwined souls.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/ari.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Ariane Koschorke</h2><h3 class='mt-1'>Matron of Honor</h3>
+            <p>In the spring of 2011, Melissa and I met during her pledgeship in the co-ed business fraternity, Alpha Kappa Psi. Little did we know, but this would be the beginning of a lifelong adventure with one another. Due to the fraternity rules of engagement between pledges (Melissa) and Master of Rituals (me), I (not so secretly) secured Melissa into my ‘fraternity family.’ Ever since that fateful day, there have been hundreds, if not thousands, of adventures due to our shared love of the unknown. The real-life adventures have changed and become more challenging throughout the years, but we continue to slug through them side by side!</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/brittany.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Brittany Bailey</h2><h3 class='mt-1'>Bridesmaid</h3>
+            <p>I am Alex’s younger sister, and I am so excited to have Melissa as my new sister-in-law! My favorite part about growing up with Alex (other than stealing his cool gadgets and insisting he let me play video games with him) was knowing he was always there to look out for me. As I’ve gotten to know Melissa over the past couple of years, I know that Alex could not have picked a sweeter person to be his wife, and I can’t wait to welcome her into the family. I currently work for Kennesaw State University as a Senior Budget Analyst. My son, Logan, is proud to be Alex and Melissa’s ring bearer.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/mary.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Mary Parton</h2><h3 class='mt-1'>Bridesmaid</h3>
+            <p>Melissa and I met when we were in school at McIntosh High School. Melissa was a junior and I was a sophomore when we first met. We didn’t know it when we were first cast in “The Diary of Anne Frank,” but that was the spark to our lifelong friendship. Even now, when we are states apart (she in Atlanta and me in Northern Virginia), we still make time to keep in touch. While we might not talk or see each other every day, when we do, it’s like no time has passed. Melissa is one of my best friends and has always been there for me whenever I need her. I’m thankful to have a best friend like her.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/kara.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Kara Foster</h2><h3 class='mt-1'>Bridesmaid</h3>
+            <p>I am a freelance artist and maker based out of Atlanta who usually works in the film industry. Melissa and I met in early 2016 after I moved to the city from Wisconsin. Melissa and I immediately shared a bond over our love of crafting, theatre, and podcasts. We became instant friends and have been watching RuPaul’s Drag Race together ever since!</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/kalie.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Kalie Martin</h2><h3 class='mt-1'>Bridesmaid</h3>
+            <p>Hi I'm Kalie and I'm so excited Melissa and Alex's big day! Melissa and I met in college at UGA. I was rushing the Alpha Kappa Psi Business Fraternity (of which Melissa and Ari were already brothers) and Melissa was my unofficial "Big" in the Fraternity. We had tons of fun and adventures together during our college years. Melissa and I moved down to Atlanta after college, where I still currently live and work in the music industry. When Melissa met Alex, I was overjoyed by how perfect they were for each other and knew it was only a matter of time before they'd be engaged. I'm so happy Melissa gets to marry her Prince Charming!</p>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-10 mb-2'>
+            <img src="{% static 'img/rule.png' %}" class='img-fluid'>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-10' align='center'>
+            <h1>Groomsmen</h1>
+        </div>
+    </div>
+    <div class='row' align='center'>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/matt.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Matt Canei</h2><h3 class='mt-1'>Best Man</h3>
+            <p>I am a game developer based in Atlanta. Alex and I met in grade school when we were both 8 years old. We quickly became lifelong best friends and "brothers" after years of Mario Kart, lugging each others’ giant computers to-and-from each others’ houses in middle school to driving to the same place 5 times a week to eat in high school. Adulthood can make friendships a bit tough, but there can never be too much distance between childhood brothers.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/krezel.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Eric Krezel</h2><h3 class='mt-1'>Groomsman</h3>
+            <p>Eric Krezel here, 42 and living the life in Grant Park (the cool section of Atlanta). A native of Chicago, I came to Atlanta just around the time of the Olympics, 1996, and met my lovely wife to be, Meredith (a native New Yorker) here in December 2012. We live with our two dogs, Dobby and Linus, who are the coolest low-riders you’ve ever seen. I’ve known Alex for 7 years through working at AT&T and him marrying Melissa makes me happy. He is one of the most genuine people in my life and when you like and respect someone, you want good things for them. Him marrying Melissa is a good thing. I am humbled by their decision to include me in their happy day. I wish them nothing but the best life has to offer them.</p>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/moss.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Adam Moss</h2><h3 class='mt-1'>Groomsman</h3>
+            <p>My name is Adam. I’m husband to an amazing wife and a father of two boys and one girl (on the way). I currently serve in the USNR and work at local parts store. I meet Alex 6 years ago while I was working for AT&T. Alex and I shared an interest in music and cars right of the bat. I’ve been honored to have Alex as a very close friend and am even more honored to be a part of this special day. I love you, Steve.</p>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-10 mb-2'>
+            <img src="{% static 'img/rule.png' %}" class='img-fluid'>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-10' align='center'>
             <h1>The Hired Help</h1>
         </div>
-        <div class='row'>
-            <div class='pic-frame'>
-                <div class='pic-content'>
-                    <img src='{% static "img/maggiebelle.jpg"%}' class='img-fluid'>
-                </div>
-                <div class='pic-content'>
-                    <h2 class='mb-1'>Maggie Belle Lamb</h2>
-                    <h3 class='mt-1'>Flower Girl</h3>
-                </div>
-            </div>
-            <div class='pic-frame'>
-                <div class='pic-content'>
-                    <img src='{% static "img/avaline.jpg"%}' class='img-fluid'>
-                </div>
-                <div class='pic-content'>
-                    <h2 class='mb-1'>Avaline Lamb</h2>
-                    <h3 class='mt-1'>Flower Girl</h3>
-                </div>
-            </div>
-            <div class='pic-frame'>
-                <div class='pic-content'>
-                    <img src='{% static "img/logan.jpg"%}' width=350>
-                </div>
-                <div class='pic-content'>
-                    <h2 class='mb-1'>Logan Robert Favero</h2>
-                    <h3 class='mt-1'>Ring Bearer</h3>
-                </div>
-            </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-12 col-lg-10' align='center'>
+            <p>We are honored to have Maggie Belle and Avi as our Flower Girls, and Logan as our Ring Bearer.  Melissa has been babysitting for the Lamb family since they moved to Atlanta in 2015.  Logan is Alex's nephew and he tells us he is very excited to deliver their rings. </p>
         </div>
-    </div> -->
-<!-- </div> -->
+    </div>
+    <div class='row' align='center'>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/maggiebelle.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Maggie Belle Lamb</h2><h3 class='mt-1'>Flower Girl</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/avaline.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Avaline Lamb</h2><h3 class='mt-1'>Flower Girl</h3>
+        </div>
+        <div class='col-xs-12 col-sm-6 col-lg-4 mb-4'>
+            <img src='{% static "img/party/logan.jpg"%}' class='img-fluid'>
+            <h2 class='mb-1'>Logan Robert Bailey</h2><h3 class='mt-1'>Ring Bearer</h3>
+        </div>
+    </div>
 {% endblock %}

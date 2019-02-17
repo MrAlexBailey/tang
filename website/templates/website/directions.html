@@ -1,25 +1,22 @@
 {% extends slim|yesno:"website/blank.html,website/index.html" %}
 {% load static %}
 {% block content %}
-<div class='spacer-medium'></div>
-<div class='content'>
-    <div class='row'>
-        <div class='pic-frame'>
-            <img width="40%" src="{% static 'img/ceremony.png' %}" style="position: relative; top: 15px; left: 150px">
-            <div class='box' style="text-align: center;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50832.12753636927!2d-83.79325902889221!3d34.60430995879139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf26a0588e6986645!2sSaint+Paul+the+Apostle+Catholic+Church!5e0!3m2!1sen!2sus!4v1539547969088" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <h2><a href="http://stpaulcleveland.com/" target="_blank">Saint Paul the Apostle</a></h2>
-                <p style="text-align: left;">The church is located at 1243 Hulsey Road in Cleveland, Georgia.</p>
-            </div>
-        </div>
-        <div class='pic-frame'>
-            <img width="40%" src="{% static 'img/reception.png' %}" style="position: relative; top: 15px; left: 150px">
-            <div class='box' style="text-align: center;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.815169727!2d-83.71567558445014!3d34.5835430469908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885f4ee448d972b9%3A0x17a3b2a7ddfbbbf3!2sThe+Venue+at+CeNita+Vineyards!5e0!3m2!1sen!2sus!4v1539548331981" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <h2><a href="http://www.venueatcenita.com/" target="_blank">CeNita Vineyards</a></h2>
-                <p style="text-align: left;">The reception venue is located at 659 Dock Dorsey Road in Celeveland, Georgia.</p>
-            </div>
+    <div class='row justify-content-center'>
+        <div class='col-12' align='center'>
+            <h1>Details Coming Soon!</h1>
         </div>
     </div>
-</div>
+    <div class='row justify-content-center'>
+        <div class='col-10' align='center'>
+            <img src="{% static 'img/rule.png' %}" class='img-fluid'>
+        </div>
+    </div>
+    <div class='row justify-content-center'>
+        <div class='col-lg-10 col-12'>
+            <p>As details continue to be finalized, we will frequently update this page. Check back soon for more information!</p>
+            <p>The wedding ceremony will take place on Saturday, September 14, 2019 at approximately 2:00 PM.</p>
+            <p>The wedding reception (consisting of dinner, drinks, and dancing) will begin around 3:30 PM on Saturday and will take place at CeNita Vineyards in Cleveland, GA. Festivities will likely end around 8:00 PM.</p>
+            <p>CeNita Vineyards is located approximately 2 hours (90 miles) from the Atlanta, GA airport and 2.5 hours (130 miles) from the Chattanooga, TN airport.</p>
+        </div>
+    </div>
 {% endblock %}

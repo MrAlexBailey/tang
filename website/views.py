@@ -25,6 +25,9 @@ def rsvp(request):
     slim = slim_trim(request)     
     return render(request, 'website/rsvp.html', {'slim': slim, 'active': 'rsvp'})
 
+def thanks(request):
+    return render(request, 'website/thanks.html')
+
 def registry(request):
     slim = slim_trim(request)
     items = RegistryItem.objects.filter(active=True).order_by('order').annotate(amount_received=Sum('donation__amount'))
@@ -42,12 +45,6 @@ def registry(request):
             item.percent_finished = '{:.2%}'.format(finished)
             unfunded.append(item)
     items = unfunded + funded
-    return render(request, 'website/registry.html', {'slim': slim, 'active': 'registry', 'items': items})
-
-def registry2(request):
-    slim = slim_trim(request)
-    donations = Donation.objects.all().prefetch_related('item')
-        
     return render(request, 'website/registry.html', {'slim': slim, 'active': 'registry', 'items': items})
 
 def engagement(request):
@@ -76,3 +73,10 @@ def paypal(request):
         return render(request, 'website/engagement.html', {'slim': slim, 'active': 'engagement'})
 
     return HttpResponse('')
+
+def main(request):
+    return render(request, 'website/main.html')
+    
+def error_404(request):
+    slim = slim_trim(request)
+    return render(request, 'website/engagement.html', {'slim': slim, 'active': 'engagement'}, status=404)

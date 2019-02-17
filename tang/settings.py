@@ -29,7 +29,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -57,7 +60,6 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-
 
 
 ROOT_URLCONF = 'tang.urls'
@@ -113,13 +115,6 @@ else:
             'PASSWORD': secrets.DB_PASSWORD,
         }
     }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 
 # Password validation
