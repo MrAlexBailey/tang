@@ -6,7 +6,7 @@ __pycache__/
 # Django Static
 static/
 */static/ 
-
+favicon.ico
 # Secrets
 secrets.py
 
