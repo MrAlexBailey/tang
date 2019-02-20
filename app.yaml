@@ -12,6 +12,7 @@ handlers:
   upload: favicon\.ico
 
 - url: .*
+  secure: always
   script: tang.wsgi.application
 
 

@@ -153,8 +153,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_URL = 'https://storage.googleapis.com/tang-232016.appspot.com/'
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = 'https://storage.googleapis.com/tang-232016.appspot.com/'
+
 STATIC_ROOT = 'static'
 
 
