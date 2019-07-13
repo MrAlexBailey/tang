@@ -5,6 +5,10 @@ from website.models import *
 import tang.secrets
 import hashlib
 import logging
+import urlparse
+from urllib import urlencode
+from urllib2 import Request, urlopen
+
 
 def slim_trim(request):
     return request.GET.get('slim', None) == 'True'
@@ -60,14 +64,27 @@ def paypal(request):
         if hashlib.sha256(request.POST['custom']).hexdigest() == tang.secrets.HASH:
             item = RegistryItem.objects.get(title=request.POST['item_name'])
             address = request.POST.get('address_street', '') + '\n' + request.POST.get('address_city', '') + ', ' + request.POST.get('address_state', '') + ' ' + request.POST.get('address_zip', '')
-            Donation.objects.create(item=item, 
+            obj = Donation.objects.create(item=item, 
                                     address=address,
-                                    amount=request.POST.get('payment_gross', ''),
+                                    amount=request.POST.get('payment_gross', 0),
                                     firstName=request.POST.get('first_name', ''),
                                     lastName=request.POST.get('last_name', ''),
                                     email=request.POST.get('payer_email', ''),
                                     transaction_id=request.POST.get('txn_id', ''),
-                                    note=request.POST.get('memo', ''))
+                                    note=request.POST.get('memo', '')
+                                    )
+            try:
+                params = urlparse.parse_qsl(request.body)
+                data = urlencode(params)
+                data += '&cmd=_notify-validate'
+                headers = {'User-Agent': 'Python-IPN-VerificationScript', 'content-type': 'application/x-www-form-urlencoded'}
+                resp = urlopen(Request('https://ipnpb.paypal.com/cgi-bin/webscr', data=data, headers=headers))
+                if resp.read() == 'VERIFIED':
+                    obj.verified = True
+                    obj.save()
+            except:
+                logging.warning('Verify Failed')
+
         return HttpResponse('')
     else:
         return render(request, 'website/engagement.html', {'slim': slim, 'active': 'engagement'})
@@ -80,3 +97,15 @@ def main(request):
 def error_404(request):
     slim = slim_trim(request)
     return render(request, 'website/engagement.html', {'slim': slim, 'active': 'engagement'}, status=404)
+
+def europe(request):
+    return render(request, 'website/europe.html')
+
+def germany(request):
+    return render(request, 'website/germany.html')
+
+def paris(request):
+    return render(request, 'website/paris.html')
+
+def zurich(request):
+    return render(request, 'website/zurich.html')
