@@ -17,6 +17,14 @@ def party(request):
     slim = slim_trim(request)     
     return render(request, 'website/party.html', {'slim': slim, 'active': 'party'})
 
+def pictures(request):
+    slim = slim_trim(request)     
+    return render(request, 'website/pictures.html', {'slim': slim, 'active': 'pictures'})
+
+def honeymoon(request):
+    slim = slim_trim(request)     
+    return render(request, 'website/honeymoon.html', {'slim': slim, 'active': 'honeymoon'})
+
 def directions(request):
     slim = slim_trim(request)     
     return render(request, 'website/directions.html', {'slim': slim, 'active': 'directions'})
@@ -34,6 +42,7 @@ def thanks(request):
 
 def registry(request):
     slim = slim_trim(request)
+    return render(request, 'website/registry.html', {'slim': slim, 'active': 'registry', 'items': ''})
     items = RegistryItem.objects.filter(active=True).order_by('order').annotate(amount_received=Sum('donation__amount'))
     funded = []
     unfunded = []

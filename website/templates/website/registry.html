@@ -3,8 +3,9 @@
 {% block content %}
     <div class='row justify-content-center'>
         <div class='col-12 col-lg-10' align='center'>
-            <p>We’ll begin our life of marital bliss with a fabulous Carnival cruise sailing out of Vancouver, Canada! Our nine-day Alaskan cruise will take us to Icy Strait Point, Sitka, Skagway, Juneau, and Ketchikan. Our wedding registry consists of experiences and expenses for our dream honeymoon where guests can make direct contributions if so inclined. The biggest gift of all, however, is your presence on our wedding day. Thank you for your love and support; we can’t wait to share our honeymoon adventures with you!</p>
-            <p>All donations are handled securely through PayPal.<br>You do not need a PayPal account to contribute.<br>You will be able to select any amount you prefer after clicking the Donate link.</p>
+            <!-- <p>We’ll begin our life of marital bliss with a fabulous Carnival cruise sailing out of Vancouver, Canada! Our nine-day Alaskan cruise will take us to Icy Strait Point, Sitka, Skagway, Juneau, and Ketchikan. Our wedding registry consists of experiences and expenses for our dream honeymoon where guests can make direct contributions if so inclined. The biggest gift of all, however, is your presence on our wedding day. Thank you for your love and support; we can’t wait to share our honeymoon adventures with you!</p> -->
+            <!-- <p>All donations are handled securely through PayPal.<br>You do not need a PayPal account to contribute.<br>You will be able to select any amount you prefer after clicking the Donate link.</p> -->
+            <p>Our honeymoon has ended and we are back to real life. Please check back soon for pictures from our many excursions. We had an absolutely amazing time and can't wait to share stories of our experiences with everyone.</p>
         </div>
     </div>
     <div class='row justify-content-center'>
@@ -12,6 +13,7 @@
             <img src="{% static 'img/rule.png' %}" class='img-fluid'>
         </div>
     </div>
+    {% if items %}
     <div class='row mb-5'>
         {% for item in items %}
         <div class='col-xs-12 col-sm-6 col-lg-4' align='center'>
@@ -42,6 +44,7 @@
             <img src="{% static 'img/rule.png' %}" class='img-fluid'>
         </div>
     </div>
+    {% endif %}
     <div class='row justify-content-center align-items-center'>
         <div class='col-lg-2 col-3'>
             <a href="https://www.target.com/gift-registry/giftgiver?registryId=aab9a74f037f4c3190fee5a8889294c2&type=WEDDING" target="_blank">
@@ -49,7 +52,7 @@
             </a>
         </div>
         <div class='col-lg-5 col-7'>
-            <p>If you would prefer to gift us something tangible, we are registered at Target.  Search for "Melissa Manson & Alex Bailey" or simply click the icon to the left.</p>
+            <p>Should you wish to contribute to our life at home together, we are registered at Target.</p><p>Search for "Melissa Manson & Alex Bailey" or simply click the icon to the left.</p>
         </div>
     </div>
 {% endblock %}
